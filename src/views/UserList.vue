@@ -17,9 +17,10 @@ export default {
   },
   created() {
     axios.get('//localhost:3000/users').then(({ data }) => {
-      // console.log('user data is', data);
       this.userList = data;
     });
+
+    // -> add ERROR Handling!!
   },
 };
 </script>
