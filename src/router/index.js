@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import RegisterUser from '../views/RegisterUser.vue';
 import LoginUser from '../views/LoginUser.vue';
+import Cookies from '../views/Cookies.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: LoginUser,
+  },
+  {
+    path: '/cookies',
+    name: 'cookies',
+    component: Cookies,
   },
   {
     path: '/userlist',
