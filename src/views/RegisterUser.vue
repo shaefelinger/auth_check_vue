@@ -47,27 +47,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 15em;
-  margin-bottom: 2em;
-}
-
-form p {
-  color: red;
-}
-
-input {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: 2.6em;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  font: 1em 'Avenir', Helvetica, sans-serif;
-} */
-</style>

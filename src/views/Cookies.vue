@@ -35,10 +35,17 @@
     <form @submit.prevent="updateCookies">
       <button>Get All Cookies</button>
     </form>
+
+    <h1>Check Server</h1>
+    <button @click="sendGetRequest('')">Send a GET-request /</button>
+    <p>{{ serverResponse }}</p>
+    <button @click="sendGetRequest('set')">Send a GET-request /set</button>
+    <button @click="sendGetRequest('read')">Send a GET-request /read</button>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
 import * as cookies from '@/helpers/CookieHelper.js';
 
 export default {
@@ -52,6 +59,7 @@ export default {
       searchName: '',
       removeName: '',
       allCookies: [],
+      serverResponse: 'No Response yet',
     };
   },
 
@@ -70,11 +78,15 @@ export default {
       cookies.remove(removeName);
       this.updateCookies();
     },
+    async sendGetRequest(route) {
+      axios.get('//localhost:3000/' + route).then(({ data }) => {
+        console.log('get request', data);
+        this.serverResponse = data;
+      });
+    },
   },
   mounted() {
     this.updateCookies();
   },
 };
 </script>
-
-<style scoped></style>
