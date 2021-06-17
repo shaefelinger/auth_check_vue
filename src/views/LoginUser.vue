@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style scoped>
-form {
+/* form {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -65,5 +65,5 @@ input {
   padding: 0.5em;
   margin-bottom: 1em;
   font: 1em 'Avenir', Helvetica, sans-serif;
-}
+} */
 </style>
